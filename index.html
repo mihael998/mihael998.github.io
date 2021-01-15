@@ -24,7 +24,7 @@
       window.onload = function () {
         console.log('platform', navigator.platform)
         console.log('navigator.userAgent', navigator.userAgent)
-        alert([navigator.platform,navigator.userAgent])
+        alert(["platform"+navigator.platform,"useragent"+navigator.userAgent])
         setTimeout(function () {
           if (iOS()) {
             window.location.replace(
