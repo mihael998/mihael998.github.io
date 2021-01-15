@@ -25,17 +25,15 @@
         console.log('platform', navigator.platform)
         console.log('navigator.userAgent', navigator.userAgent)
         alert(["platform"+navigator.platform,"useragent"+navigator.userAgent])
-        setTimeout(function () {
-          if (iOS()) {
-            window.location.replace(
-              'https://apps.apple.com/us/app/smart-health-companion/id1513619568',
-            )
-          } else {
-            window.location.replace(
-              'https://play.google.com/store/apps/details?id=io.patchai.shc',
-            )
-          }
-      }, 5000);
+        if (iOS()) {
+          window.location.replace(
+            'https://apps.apple.com/us/app/smart-health-companion/id1513619568',
+          )
+        } else {
+          window.location.replace(
+            'https://play.google.com/store/apps/details?id=io.patchai.shc',
+          )
+        }
 
       }
     </script>
