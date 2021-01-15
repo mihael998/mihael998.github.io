@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Smart Health Companion</title>
+    <script>
+      function iOS() {
+        console.log('platform', navigator.platform)
+        console.log('navigator.userAgent', navigator.userAgent)
+        return (
+          [
+            'iPad Simulator',
+            'iPhone Simulator',
+            'iPod Simulator',
+            'iPad',
+            'iPhone',
+            'iPod',
+            'MacIntel',
+          ] ||
+          // iPad on iOS 13 detection
+          (navigator.userAgent.includes('Mac') && 'ontouchend' in document)
+        )
+      }
+
+      window.onload = function () {
+        if (iOS()) {
+          window.location.replace(
+            'https://apps.apple.com/us/app/smart-health-companion/id1513619568',
+          )
+        } else {
+          window.location.replace(
+            'https://play.google.com/store/apps/details?id=io.patchai.shc',
+          )
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <p></p>
+  </body>
+</html>
